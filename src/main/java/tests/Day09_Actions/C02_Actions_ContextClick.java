@@ -1,0 +1,34 @@
+package tests.Day09_Actions;
+
+import Utilities.ReusableMethods;
+import Utilities.TestBase;
+import org.junit.Assert;
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+
+public class C02_Actions_ContextClick extends TestBase {
+    @Test
+    public void sagClickTesti(){
+        //https://testotomasyonu.com/click adresine gidin
+        driver.get("https://testotomasyonu.com/click");
+        ReusableMethods.bekle(2); //bazen java scriptlerde senkronizasyon sorunu yasayabiliriz
+        // o yuzden boyle bekletme yapmak sorunu cozer
+
+        //DGI Drones üzerine sağ click yapin
+        Actions actions = new Actions(driver);
+        WebElement drones = driver.findElement(By.id("pic2_thumb"));
+        actions.contextClick(drones).perform();
+        ReusableMethods.bekle(3);
+
+        //Alette cıkan yazının "Tebrikler!... Sağ click yaptiniz." oldugunu test edin
+        String expectedAlertText = "Tebrikler!... Sağ click yaptınız.";
+        String actualAlertText = driver.switchTo().alert().getText();
+        Assert.assertEquals(expectedAlertText,actualAlertText);
+        //Tamam diyerek alerti kapatın
+        driver.switchTo().alert().accept();
+
+    }
+
+}
