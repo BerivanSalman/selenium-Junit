@@ -28,7 +28,7 @@ public class C02_Actions_ContextClick extends TestBase {
         Assert.assertEquals(expectedAlertText,actualAlertText);
         //Tamam diyerek alerti kapatın
         driver.switchTo().alert().accept();
-        //
+
 
     }
 
