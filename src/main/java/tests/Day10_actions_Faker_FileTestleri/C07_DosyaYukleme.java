@@ -1,0 +1,56 @@
+package tests.Day10_actions_Faker_FileTestleri;
+
+import Utilities.ReusableMethods;
+import Utilities.TestBase;
+import org.junit.Assert;
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
+
+public class C07_DosyaYukleme extends TestBase {
+    @Test
+    public void test01(){
+            /*
+            Selenium'da webdriver ile islemlerimizi yapariz
+            webdriver bizim bilgisayarimizdaki dosyalara ulasamaz ve kullanamaz
+            Dosya exists islemlerinde Java'dan yararlanip
+            dosya yolunu kullanarak islemler yapabiliriz
+
+            dosya yuklemede ise dosya sec butonuna bastigimizda
+            bilgisayarimizdaki dosya yapisi acilir
+            Biz webdriver ile bilgisayarimizdaki dosya yapisinda islem yapamayacagimiz icin
+            chooseFile butonuna sendKeys() ile dosya yolunu yollariz
+         */
+
+        //https://the-internet.herokuapp.com/upload adresine gidelim
+        driver.get("https://the-internet.herokuapp.com/upload");
+        //chooseFile butonuna basalim
+        WebElement chooseFileButtonu = driver.findElement(By.id("file-upload"));
+        // testlerimizin butun takim uyelerinde calisabilmesi icin
+        // dosya yolunu dinamik yapmaliyiz
+        // biz bir onceki test'de indirdigimiz
+        // flower.png'yi yukleyelim
+        //Yuklemek istediginiz dosyayi secelim. Bilgisayardaki dosyayı bulacagımız icin user.home kullanırız
+        ///Users/berivansalman/Desktop
+        String dinamikDosyaYolu = System.getProperty("user.home")+ //herkeste farklı olan kisim
+                "/Desktop";          //Herkeste ayni olan kisim
+        chooseFileButtonu.sendKeys(dinamikDosyaYolu);
+        //Upload butonuna basalim.
+
+       /* driver.findElement(By.id("file-submit")).click();
+
+        //“File Uploaded!” textinin goruntulendigini test edelim.
+
+        WebElement uplodedYaziElementi = driver.findElement(By.tagName("h3"));
+
+        String expectedYazi = "File Uploaded!";
+        String actualYazi = uplodedYaziElementi.getText();
+
+        Assert.assertEquals(expectedYazi,actualYazi);
+
+        ReusableMethods.bekle(10);
+
+        */
+    }
+}
