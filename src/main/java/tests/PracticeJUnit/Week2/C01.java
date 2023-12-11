@@ -1,4 +1,4 @@
-package tests.PracticeJUnit;
+package tests.PracticeJUnit.Week2;
 
 import org.junit.Test;
 

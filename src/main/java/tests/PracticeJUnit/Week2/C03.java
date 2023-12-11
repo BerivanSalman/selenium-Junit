@@ -1,4 +1,4 @@
-package tests.PracticeJUnit;
+package tests.PracticeJUnit.Week2;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.*;
