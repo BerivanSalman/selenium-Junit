@@ -17,7 +17,7 @@ public class C03_Actions extends TestBase {
         //3- Cizili alan uzerinde sag click yapin
         Actions actions = new Actions(driver);
         WebElement cizgiAlan = driver.findElement(By.id("hot-spot"));
-        actions.contextClick(cizgiAlan).contextClick().perform();
+        actions.contextClick(cizgiAlan).perform();
 
         //4- Alert’te cikan yazinin “You selected a context menu” oldugunu test edin.
         String expectedText = "You selected a context menu";

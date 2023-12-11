@@ -1,4 +1,4 @@
-package tests.Day11_waits_cookies;
+package tests.Day11_waits_cookies_webtables;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.Assert;

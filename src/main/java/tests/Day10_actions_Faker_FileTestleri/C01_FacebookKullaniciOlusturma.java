@@ -18,6 +18,7 @@ public class C01_FacebookKullaniciOlusturma extends TestBase {
         //2- Yeni hesap olustur butonuna basalim
         driver.findElement(By.xpath("//*[text()='Create new account']")).sendKeys(Keys.ENTER);
         //3- Ad, soyad, mail ve sifre kutularina deger yazalim ve kaydol tusuna basalim
+        ReusableMethods.bekle(2);
        WebElement locator =  driver.findElement(By.xpath("//*[@*='firstname']"));
         Actions actions = new Actions(driver);
         ReusableMethods.bekle(1);
@@ -35,6 +36,7 @@ public class C01_FacebookKullaniciOlusturma extends TestBase {
                 .sendKeys("1990").sendKeys(Keys.TAB)
                 .sendKeys(Keys.TAB)
                 .sendKeys(Keys.ARROW_RIGHT).perform();
+        ReusableMethods.bekle(2);
 
 //4- Kaydol tusuna basalim
         driver.findElement(By.name("websubmit")).click();
