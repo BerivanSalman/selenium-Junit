@@ -1,0 +1,7 @@
+
+
+Selenium, browserları otomasyonla calıstıracak toollar icin bir suittir.
+WebDriver driver = new ChromeDriver() = Bir Webdriver objesi olusturdugumuzda Selenium kendisi bir Browser olusturur
+(Chrome) ve bundaki en guncel ozellikleri bilgisayarımızda bulunan Chrome browserin surumunden alır. Maven la bunu otomatik alır
+WebDriver: bizim elimizle ve gozumuzle klavye mouse kullanarak yapyıgımız islemleri bizim adımıza yapar
+Webelement: Bir sayfadaki etkileşimli ya da etkilesimsiz hersey(yazı, fotograf, buttonlar, videolar)
