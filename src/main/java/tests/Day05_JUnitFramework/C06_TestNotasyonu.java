@@ -1,7 +1,6 @@
 package tests.Day05_JUnitFramework;
 
 import Utilities.ReusableMethods;
-import com.google.common.annotations.VisibleForTesting;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 import org.junit.Test;
@@ -10,12 +9,12 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 
-public class TestNotasyonu {
+public class C06_TestNotasyonu {
 //Bir classın icinde birden fazla bagımsız calısan test olur mu?
  //JUnit ile calıstıgımızda class da birden fazla test oldugunda
- //toplu calıstırdıgımızda hangi sıra ile calıstıgını BİLEMEYİZ ve kontrol edemeyiz
+ //toplu calıstırdıgımızda hangi sıra ile calıstıgını BİLEMEYİZ ve KONTROL EDEMEYİZ
    @Test
-    public void testOtomasyonuTest(){
+    public void testOtomasyonuTest(){ //test methodlari static olmamalıdır
     WebDriverManager.chromedriver().setup();
     WebDriver driver = new ChromeDriver();
     driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));

@@ -1,5 +1,6 @@
 package Utilities;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -22,6 +23,10 @@ public class ReusableMethods {
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
+    }
+    public static void istenenelemanascrollyapma(WebDriver driver,WebElement scrollyapılacakelemet){
+        JavascriptExecutor javascriptExecutor= (JavascriptExecutor) driver;
+        javascriptExecutor.executeScript("arguments[0].scrollIntoViewIfNeeded(true);",scrollyapılacakelemet);
     }
     public static WebDriver titleIleSayfaDegistir(WebDriver driver, String hedefSayfaTitle){
 

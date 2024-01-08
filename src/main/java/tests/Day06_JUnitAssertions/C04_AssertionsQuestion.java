@@ -12,7 +12,12 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 
-public class AssertionsQuestion {
+public class C04_AssertionsQuestion {
+    /*Ayrı ayrı test methodları olusturdugumuz icin birinin failed olması diğerlerini etkilemez
+    Tek bir test methodunda yaparsak birinde hata olunca diğerleri calısmazdı. Bir test methodunda
+    birden fazla assertion oldugunda her bir assertion ayri ayri raporlanmamıs olur once hata veren assertionu
+    düzeltip sonra tekrar calıstırmamız gerekir
+     */
     //https://www.bestbuy.com/ adresine gidin farklı test methodlari olusturarak sagidaki testleri yapin
     //sayfa URL'inin "https://www.bestbuy.com/ " ' a esit oldugunu test edin
     //titleTest=>Sayfa baslıgının "Rest" icermedigini (contains) test edin

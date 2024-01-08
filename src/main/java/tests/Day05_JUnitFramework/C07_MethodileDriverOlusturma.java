@@ -9,7 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 
-public class MethodileDriverOlusturma {
+public class C07_MethodileDriverOlusturma {
     WebDriver driver; //bunu classın icinde olusturduk tum classda kullanabilelim diye
     public void driverOlustur(){
         WebDriverManager.chromedriver().setup();

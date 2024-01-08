@@ -13,8 +13,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.time.Duration;
 
 public class C01_RadioButton {
-    //Gerekli yapiyi olusturun ve aşağıdaki görevi tamamlayın.
-    //	c. Sectiginiz radio button’un seçili, ötekilerin seçili olmadigini test edin
+    //birden fazla kutu işaretleyemeyiz readio buttonda
     WebDriver driver;
     @Before
     public void setup(){

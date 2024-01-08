@@ -16,7 +16,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 
-public class Before_AfterNotasyonlari {
+public class C01_Before_AfterNotasyonlari {
     WebDriver driver;
 
     @Before

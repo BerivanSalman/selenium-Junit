@@ -4,7 +4,7 @@ package tests.Day06_JUnitAssertions;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class Assertions {
+public class C03_Assertions {
     /*
     Bize verilen gorevde birden fazla assertion varsa tek bir test methoduyla yapmak
     akıllıca degildir. Tek biri hata verirse diger methodları yapma calısmayı durdurur.
@@ -35,9 +35,6 @@ public class Assertions {
     String str1 ="Ali", str2= "ALI";
     Assert.assertTrue(str1.equalsIgnoreCase(str2)); //passed
     Assert.assertFalse(str1.equals(str2)); //passed
-
-
-
 
 
     int sayi1 = 20;

@@ -12,10 +12,12 @@ import java.util.List;
 
 public class C03_DropdownMenu extends TestBase {
     @Test
-    //Dropdown menuler 'select' ile ve secilebilecek opsiyonlar da "option" tagi ile olusturulmustur.
+    //Her acılan menu dropdown menu değildir.
+    // Eger acılır menu select tag ı ile olusturulmussa ve secenekleri de optionla olusturulmussa dropdown menudur
+    // Dropdown menuler 'select' ile ve secilebilecek opsiyonlar da "option" tagi ile olusturulmustur.
     //İlk adım Webelement ile locate etmektir
     //İkinci adim select classından bir obje olusturmalıyız ve new Select() icine yukarda olusturulan webelement konulmalıdır
-    // selectByIndex, selectByValue ya da eselectByVisibleText kullanmalıyız duruma gore.
+    // selectByIndex, selectByValue ya da selectByVisibleText kullanmalıyız duruma gore. index 0 dan baslar
     public void dropdownTesti(){
         //● https://testotomasyonu.com/form adresine gidin.
         driver.get("https://testotomasyonu.com/form");
@@ -39,10 +41,12 @@ public class C03_DropdownMenu extends TestBase {
 
         //  4. Secilen degerleri konsolda yazdirin
         //System.out.println(selectGun); selectGun bir obje oldugu icin referansı yazdırır
-        // Dropdown menude secim yaptiktan sonra yapilan secimi yazdirmak isterseniz .getFirstSelectedOption().getText() kullaniriz
+        // Dropdown menude secim yaptiktan sonra yapilan secimi yazdirmak isterseniz
+        // .getFirstSelectedOption().getText() kullaniriz
         //getFirstSelectedOption() bir Webelement getirir getText diyerek o Webelementteki yaziyi alırız
         System.out.println("Secilen gun: "+selectGun.getFirstSelectedOption().getText() +
-                "\nSecilen ay: "+ selectAy.getFirstSelectedOption().getText()+"\nSecilen yil: "+selectYil.getFirstSelectedOption().getText());
+                "\nSecilen ay: "+ selectAy.getFirstSelectedOption().getText()+
+                "\nSecilen yil: "+selectYil.getFirstSelectedOption().getText());
 
         //	5. Ay dropdown menüdeki tum değerleri(value) yazdırın getOptions diyerek List<Weblement> icinde bir list dondurur bize
         List<WebElement> ayOpsiyonlariElementList = selectAy.getOptions();

@@ -15,7 +15,10 @@ isleme gerek yoktur.
 Js alerts inspect yapilamaz, ekstra isleme ihtiyac vardir
      */
     /*
-    3 test method'u olusturup asagidaki gorevi tamamlayin
+    3 tane alert var. Alertte mouse kullanılamaz hale gelir. Birisi
+    -Click for JS alert bilgi amaclı çıkar okay a basar kapatırız
+    -Click for JS Confirm kaydet ya da etme
+    -Click for JS Prompt bilgi istiyor kutu cıkar birsey yazmamız gerek
      */
     @Test
     public void jsBasicAlert(){
@@ -54,7 +57,8 @@ Js alerts inspect yapilamaz, ekstra isleme ihtiyac vardir
         driver.switchTo().alert().sendKeys("Abdullah");
         // OK tusuna basarak alert'i kapatalim
         driver.switchTo().alert().accept();
-        // Cikan sonuc yazisinin Abdullah icerdigini test edelim
+        // Cikan sonuc yazisinin Abdullah icerdigini test edelim. Oraya Abdullah yazdıgmız
+        // gorunmuyor kutuda ama altta gonunuyor
         WebElement yazi = driver.findElement(By.id("result"));
         String expectedYazı = "Abdullah";
         String actualYazi = yazi.getText();

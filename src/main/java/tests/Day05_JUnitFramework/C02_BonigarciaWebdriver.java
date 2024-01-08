@@ -9,11 +9,11 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 
-public class BonigarciaWebdriver {
+public class C02_BonigarciaWebdriver {
     public static void main(String[] args) throws InterruptedException {
         //bir class'ta test işlemlerine başlamadan once ilk olarak Webdriver objemizi olusturup ayarlamaları yapmalıyız
        WebDriverManager.chromedriver().setup();
-        WebDriver driver = new ChromeDriver();
+        WebDriver driver = new ChromeDriver(); //Buraya Firefox yazarsak oraya gider
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.get("https://www.testotomasyonu.com");

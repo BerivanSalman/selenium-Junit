@@ -1,5 +1,6 @@
 
-
+Maven bir build tool dur. Projemizde ihtiyac duydugumuz kaynakları kütüphaneleri pom.xml i kullanarakckolayca projemize
+eklememizi saglar. En cok kullanılan ve en guncel olanı eklemeliyizProject Oriented Model (Pom)
 Selenium, browserları otomasyonla calıstıracak toollar icin bir suittir.
 WebDriver driver = new ChromeDriver() = Bir Webdriver objesi olusturdugumuzda Selenium kendisi bir Browser olusturur
 (Chrome) ve bundaki en guncel ozellikleri bilgisayarımızda bulunan Chrome browserin surumunden alır. Maven la bunu otomatik alır

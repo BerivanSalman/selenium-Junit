@@ -13,7 +13,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 
-public class BeforeClass_AfterClass {
+public class C02_BeforeClass_AfterClass {
+    /*
+    Before Class testlerin en basında bir kere calısır ve After Class testlerin en sonunda 1 kere calısır
+     */
     /*3 farklı test methodu olusturarak asagıdakileri yapin
     1-testotomasyonu.com sayfasina gidip url'in testotomasyonu icerdigini test edin
     2-phone icin arama yaptirin ve aramam sonucunda urun bulunabildigini test edin
@@ -24,6 +27,9 @@ public class BeforeClass_AfterClass {
     -test methodlarının dogru sırada calısması gerekir (methodlara test01,test02,test03 gibi isimler veririz)
     -driver objesi um methodlardan nce olusturulmalı ve tum methodlar calıstıktan sonra kapatılmalıdır(BeforeClass, AfterClass olustururuz)
     Ancak dikkat etmemiz gereken konu bu notasyonlari kullanan methodlar STATIC olmalıdır
+     */
+    /*
+    Before Class testlerin en basında bir kere calısır ve After Class testlerin en sonunda 1 kere calısır
      */
     static WebDriver driver;
     @BeforeClass

@@ -3,7 +3,6 @@ package tests.Day05_JUnitFramework;
 import Utilities.ReusableMethods;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import junit.framework.AssertionFailedError;
-import net.bytebuddy.implementation.bytecode.Throw;
 import org.junit.After;
 import org.junit.Before;
 
@@ -16,7 +15,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 
-public class BeforeAfterNotasyonlari {
+public class C08_BeforeAfterNotasyonlari {
     /*
     JUnite'e gore bir testin Failed olabilmesi icin kodların bir sorunla karsılasması ve
     odların methodun sonuna kadar calısmaması gerekir

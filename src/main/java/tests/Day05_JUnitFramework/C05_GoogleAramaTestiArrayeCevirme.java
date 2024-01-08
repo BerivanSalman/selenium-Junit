@@ -9,7 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 
-public class GoogleAramaTesti {
+public class C05_GoogleAramaTestiArrayeCevirme {
     public static void main(String[] args) {
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
@@ -17,7 +17,6 @@ public class GoogleAramaTesti {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         //https://www.google.com/ adresine gidin
         driver.get("https://www.google.com/");
-        //cookies uyarısını kabul ederek kapatın
         //Sayfa baslıgının "Google" ifadesi icerdigini test edin
         WebElement googleText= driver.findElement(By.className("lnXdpd"));
         if (googleText.equals("Google")){
@@ -34,7 +33,7 @@ public class GoogleAramaTesti {
         //sonuc sayisinin 10 milyondan fazla oldugunu test edin
         String elemanSayisiStr = elementSayisi.getText(); //Yaklaşık 186.000.000 sonuç bulundu (0,35 saniye)
         //once array e ceviriyoruz;
-        String[] sonucYazisiArr = elemanSayisiStr.split(" ");
+        String[] sonucYazisiArr = elemanSayisiStr.split(" "); //indexlere ayırdık
         elemanSayisiStr = sonucYazisiArr[1];//186.000.000
         //simdi de integera cevircez once noktalardan kurtulcaz;
         //elemanSayisiStr =elemanSayisiStr.replace(".",""); ya da
