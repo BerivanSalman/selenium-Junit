@@ -22,9 +22,15 @@ public class C07_DropDownQuestion extends TestBase {
         driver.findElement(By.id("searchDropdownBox")).click();
         WebElement kategorilerDdm = driver.findElement(By.xpath("//*[@title='Search in']"));
         Select select = new Select(kategorilerDdm);
+        //Tum opsiyonları almamızı istediği icin;
         List<WebElement> kategoriListesi  = select.getOptions();
         System.out.println(ReusableMethods.stringListeDonustur(kategoriListesi));
         Assert.assertEquals(54,kategoriListesi.size());
+        /*
+        Java.lang.AssertionError:
+        Expected :54
+       Actual   :28
+         */
     }
     @Test
     public void Question02() throws InterruptedException {

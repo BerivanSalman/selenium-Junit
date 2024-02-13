@@ -1,5 +1,6 @@
 package tests.Day07_testBaseClass_DropDown;
 
+import Utilities.ReusableMethods;
 import Utilities.TestBase;
 import org.junit.Assert;
 import org.junit.Test;
@@ -30,6 +31,7 @@ public class C08_DropdownMenu extends TestBase {
         //tum dropdown degerleri yazdirin (Bir list olusturulur)
         List<WebElement> optionsList = select.getOptions();
         //Webelementleri direkt yazdıramayız. For eachle yazdırırız
+        //System.out.println(ReusableMethods.stringListeDonustur(optionsList));
         for (WebElement each: optionsList) //each optionsListten Webelementleri getirir bize
         {
             System.out.println(each.getText()); //burda da her getirdiği Webelementin textini alırız

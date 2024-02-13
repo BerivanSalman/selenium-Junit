@@ -43,7 +43,7 @@ public class C06_KontrolsuzCokluWindowKullanimi extends TestBase {
             Burada Java'dan yaralanarak mini bir bulmaca cozmeliyiz
          */
         String ilkSayfaWHD = driver.getWindowHandle();
-        Set<String> wHDSeti = driver.getWindowHandles();
+        Set<String> wHDSeti = driver.getWindowHandles(); //windowhandles acık olan tum sayfaların window handle değerlerini getirir
         String ikinciSayfaWhd = "";
         for (String each : wHDSeti
         ) {
@@ -80,7 +80,7 @@ public class C06_KontrolsuzCokluWindowKullanimi extends TestBase {
 
         Assert.assertTrue(actualUrl.contains(expectedUrlIcerik));
 
-        System.out.println(wHDSeti);
+        System.out.println(wHDSeti); // her calıstırdıgımızda sayfanin windowhandle degerleri degisir. Bu yüzden methodlastırma yapamam
 
         ReusableMethods.bekle(3);
     }

@@ -28,6 +28,8 @@ public class C03_Actions extends TestBase {
 
         //6- Elemental Selenium linkine tiklayalim
        driver.findElement(By.xpath("//*[text()='Elemental Selenium']")).click();
+       //Elemental Selenium linkine  tiklayinca yeni window da acılıyor. Yeni sayfadaki yaziyi okuyabilmem icin
+        // driver ımı yeni sayfaya gecirmem gerekiyor.
 
         //7- Acilan  yeni sayfada h1 taginda “Make sure your code lands” yazdigini test edelim
         driver = ReusableMethods.titleIleSayfaDegistir(driver,"Elemental Selenium | Elemental Selenium");
@@ -36,7 +38,6 @@ public class C03_Actions extends TestBase {
         String actualH1Yazi = h1Yazielementi.getText();
 
         Assert.assertEquals(expectedYazi,actualH1Yazi);
-
 
     }
 

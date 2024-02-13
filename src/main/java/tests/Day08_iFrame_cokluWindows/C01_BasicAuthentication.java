@@ -9,10 +9,10 @@ import org.openqa.selenium.WebElement;
 public class C01_BasicAuthentication extends TestBase {
     @Test
     public void basicAuntenticationTest(){
-        //API bize sifre ve kullanıcı adını vermelidir ve biz de onu url e girmeliyiz. O zaman anlar bizim onun kullanıcısı oldugumuzu
+        //API bize sifre ve kullanıcı adını vermelidir ve biz de onu url e girmeliyiz. O zaman bizim onun kullanıcısı oldugumuzu anlar
         //https://testotomasyonu.com/basicauth sayfasina gidin
-       // driver.get("https://testotomasyonu.com/basicauth"); boyle yapip gidince inspect yapamıyoruz.
-        // Oyüzden asagıda soyledigi gibi gitmeliyiz
+       // driver.get("https://testotomasyonu.com/basicauth"); boyle yapip gidince password ve username istiyor oralara bilgi girmek icin
+        // inspect yapmamız gerekiyor ama sağ click çalısmıyor, inspect yapamıyoruz. Oyüzden asagıda soyledigi gibi gitmeliyiz;
         //asagidaki yontem ve datalari kullanarak authenticationu yapin
         //Html komutu : https;//username:password@URL
         driver.get("https://membername:sunflower@testotomasyonu.com/basicauth");

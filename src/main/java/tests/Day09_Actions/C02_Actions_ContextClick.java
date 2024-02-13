@@ -16,17 +16,17 @@ public class C02_Actions_ContextClick extends TestBase {
         ReusableMethods.bekle(2); //bazen java scriptlerde senkronizasyon sorunu yasayabiliriz
         // o yuzden boyle bekletme yapmak sorunu cozer
 
-        //DGI Drones üzerine sağ click yapin
+        //DGI Drones üzerine sağ click yapin.
         Actions actions = new Actions(driver);
-        WebElement drones = driver.findElement(By.id("pic2_thumb"));
+        WebElement drones = driver.findElement(By.id("pic2_thumb")); //Gidip o bölgede locate aliriz ve buraya yazariz
         actions.contextClick(drones).perform();
         ReusableMethods.bekle(3);
 
         //Alette cıkan yazının "Tebrikler!... Sağ click yaptiniz." oldugunu test edin
         String expectedAlertText = "Tebrikler!... Sağ click yaptınız.";
-        String actualAlertText = driver.switchTo().alert().getText();
+        String actualAlertText = driver.switchTo().alert().getText();//aletteki yazıyı almamız icin alerte gecis yapmalıyız
         Assert.assertEquals(expectedAlertText,actualAlertText);
-        //Tamam diyerek alerti kapatın
+        //Tamam diyerek alerti kapatın. Yine alerte geceriz
         driver.switchTo().alert().accept();
 
 

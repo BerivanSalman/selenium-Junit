@@ -30,7 +30,7 @@ public class C01_Odev extends TestBase {
         Assert.assertTrue(actualTitle.contains(expectedTitle));
         //● ’Please click for Electronics Products’ linkine tiklayin.
         driver.findElement(By.linkText("Electronics Products")).click();
-        //● Electronics sayfasinin acildigini test edin
+        //● Electronics sayfasinin acildigini test edin. Bu linke tiklayinca driver ilk sayfada kaliyor bunu yeni bir tab olarak aciyor.
         driver = ReusableMethods.titleIleSayfaDegistir(driver,"Test Otomasyonu - Electronics");
         System.out.println(driver.getTitle());
 

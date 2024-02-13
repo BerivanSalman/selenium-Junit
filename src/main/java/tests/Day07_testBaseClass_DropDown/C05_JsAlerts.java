@@ -15,7 +15,7 @@ isleme gerek yoktur.
 Js alerts inspect yapilamaz, ekstra isleme ihtiyac vardir
      */
     /*
-    3 tane alert var. Alertte mouse kullanılamaz hale gelir. Birisi
+    3 tane alert var. Alertte mouse kullanılamaz hale gelir. Sag click yapamayız ve onclick() özelliği vardır Birisi
     -Click for JS alert bilgi amaclı çıkar okay a basar kapatırız
     -Click for JS Confirm kaydet ya da etme
     -Click for JS Prompt bilgi istiyor kutu cıkar birsey yazmamız gerek

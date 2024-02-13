@@ -18,10 +18,10 @@ public class C05_KontrolluCokluWindowIleCalisma extends TestBase {
         Assert.assertTrue(actualUrl.contains(expectedUrl));
         String anasayfaWindowHandleDegeri = driver.getWindowHandle();
 
-        // yeni bir tab olarak electronics linkini acin. Tab dedigi icin WindowType ı TAB seceriz
+        // yeni bir tab olarak electronics linkini acin. TAB dedigi icin WindowType ı TAB seceriz
         driver.switchTo().newWindow(WindowType.TAB).get("https://testotomasyonu.com");
         driver.findElement(By.xpath("(//a[text()='Electronics'])[3]")).click();
-        String electronicsWindowHandleDegeri = driver.getWindowHandle();
+        String electronicsWindowHandleDegeri = driver.getWindowHandle(); //window handle degerini kaydetmek icin yaparız
 
         // acilan sayfanin electronics sayfasi oldugunu test edin
         // Title'da Electronics oldugunu test edelim
@@ -29,7 +29,7 @@ public class C05_KontrolluCokluWindowIleCalisma extends TestBase {
         String actualTitle = driver.getTitle();
         Assert.assertTrue(actualTitle.contains(expectedTitle));
 
-        // yeni bir window'da acilacak sekilde menfashion linkini tiklayin
+        // yeni bir     WİNDOW'da acilacak sekilde menfashion linkini tiklayin
         driver.switchTo().newWindow(WindowType.WINDOW).get("https://testotomasyonu.com");
         driver.findElement(By.xpath("(//a[text()='Men Fashion'])[3]")).click();
         String menFashionWindowHandleDegeri = driver.getWindowHandle();
